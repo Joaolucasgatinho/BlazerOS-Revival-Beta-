@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlazerOS Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpapersok.com/images/high/orange-and-yellow-painting-21nvvk9gta122912.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1rem;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: grey;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .icon {
+            display: inline-block;
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .app-store {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .app, .game {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: calc(25% - 1rem);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to BlazerOS</h1>
+    </header>
+    <main>
+        <section id="buttons">
+            <button class="btn btn-primary" onclick="handlePrimaryClick()">Primary Button</button>
+            <button class="btn btn-secondary" onclick="handleSecondaryClick()">Secondary Button</button>
+        </section>
+        <section id="forms">
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="app-store" class="app-store">
+            <div class="app">
+                <span class="material-icons icon">apps</span>
+                <p>App Store</p>
+            </div>
+            <div class="app">
+                <span class="material-icons icon">app_registration</span>
+                <p>App 1</p>
+            </div>
+            <div class="app">
+                <span class="material-icons icon">app_settings_alt</span>
+                <p>App 2</p>
+            </div>
+            <!-- Add more apps as needed -->
+        </section>
+        <section id="games" class="app-store">
+            <div class="game">
+                <span class="material-icons icon">sports_esports</span>
+                <p>Game 1</p>
+            </div>
+            <div class="game">
+                <span class="material-icons icon">sports_esports</span>
+                <p>Game 2</p>
+            </div>
+            <div class="game">
+                <span class="material-icons icon">sports_esports</span>
+                <p>Game 3</p>
+            </div>
+            <!-- Add more games as needed -->
+        </section>
+    </main>
+    <script>
+        function handlePrimaryClick() {
+            alert("Primary Button Clicked!");
+        }
+
+        function handleSecondaryClick() {
+            alert("Secondary Button Clicked!");
+        }
+
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+
+</html>
